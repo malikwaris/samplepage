@@ -18,10 +18,10 @@
         submitSuccess: function ($form, event) {
           event.preventDefault(); // prevent default submit behaviour
           // get values from FORM
-          var name = $("input#hunde").val();
-          var email = $("input#Katzen").val();
-          var phone = $("input#pferde").val();
-          var message = $("naturhielkunde").val();
+          var hunde = $("input#hunde").val();
+          var Katzen = $("input#Katzen").val();
+          var pfrede= $("input#pferde").val();
+          var natuturehielkunde = $("naturhielkunde").val();
           var firstName = name; // For Success/Failure Message
           // Check for white space in name for Success/Fail message
           if (firstName.indexOf(' ') >= 0) {
@@ -33,11 +33,10 @@
             url: "//formspree.io/{{ site.email }}",
             type: "POST",
             data: {
-              hunde: name,
-              phone: phone,
-              email: email,
-              message: message
-            },
+              hunde: hunde,
+              katzen: katzen,
+              pfrede: pfrede,
+                         },
             cache: false,
             
             complete: function () {
